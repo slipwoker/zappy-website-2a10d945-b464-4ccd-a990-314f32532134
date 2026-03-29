@@ -5131,31 +5131,21 @@ body.accessibility-widget-visible ._access-menu {
 /* /Zappy custom logo size */
 
 
-.index-features-section .index-features-figure img,
-.index-features-section img {
-  border-radius: 0 !important;
+.navbar .nav-menu li a {
+  font-size: 20px !important;
+  font-weight: 600 !important;
 }
 
-.index-benefits-section .index-benefit-icon {
-  border-radius: 0 !important;
+.navbar .nav-container {
+  justify-content: center !important;
 }
 
-.index-benefits-section .index-benefits-map-card,
-.index-benefits-section .index-benefits-map-img,
-.index-benefits-section .index-benefits-peek-tile {
-  border-radius: 0 !important;
-  overflow: hidden !important;
+.navbar .nav-right-group {
+  justify-content: center !important;
 }
 
-.index-contact-section .index-contact-field input,
-.index-contact-section .index-contact-field textarea,
-.index-contact-section .index-contact-submit,
-.index-contact-section .index-contact-card {
-  border-radius: 0 !important;
-}
-
-.index-stats-section .index-stat-card {
-  border-radius: 0 !important;
+.navbar .nav-menu {
+  justify-content: center !important;
 }
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
