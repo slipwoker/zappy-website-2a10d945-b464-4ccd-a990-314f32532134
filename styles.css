@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
 
 
 
@@ -5133,8 +5133,13 @@ body.accessibility-widget-visible ._access-menu {
 /* /Zappy custom logo size */
 
 
-.navbar .nav-menu a {
-  font-family: 'Secular One', sans-serif;
+:root {
+  --font-heading: 'Rubik', 'Heebo', sans-serif;
+  --font-body: 'Heebo', 'Rubik', sans-serif;
+}
+
+body {
+  font-family: 'Heebo', 'Rubik', sans-serif;
 }
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
