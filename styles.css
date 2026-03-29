@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&display=swap');
-
 
 
 /* Self-hosted fonts (Inter + Rubik for multi-language support) */
@@ -5133,18 +5131,57 @@ body.accessibility-widget-visible ._access-menu {
 /* /Zappy custom logo size */
 
 
-html body, html body * {
-  font-family: 'Frank Ruhl Libre', serif !important;
+.nav-search-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 220px;
 }
 
-html body h1, html body h2, html body h3, html body h4, html body h5, html body h6 {
-  font-family: 'Frank Ruhl Libre', serif !important;
-  font-weight: 400 !important;
+.nav-search-wrapper .gsc-control-cse {
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
 }
 
-html body p, html body span, html body a, html body li, html body div {
+.nav-search-wrapper .gsc-search-box {
+  margin: 0 !important;
+}
+
+.nav-search-wrapper .gsc-input-box {
+  border-radius: var(--radius-btn) !important;
+  border: 1px solid rgba(250,249,246,0.4) !important;
+  background: rgba(250,249,246,0.15) !important;
+  height: 34px !important;
+}
+
+.nav-search-wrapper .gsc-input input[type="text"] {
+  background: transparent !important;
+  color: var(--nav-text) !important;
   font-family: 'Frank Ruhl Libre', serif !important;
-  font-weight: 300 !important;
+  font-size: 14px !important;
+  padding: 4px 10px !important;
+}
+
+.nav-search-wrapper .gsc-input input[type="text"]::placeholder {
+  color: rgba(250,249,246,0.6) !important;
+}
+
+.nav-search-wrapper .gsc-search-button {
+  display: none !important;
+}
+
+.nav-search-wrapper .gsib_a {
+  padding: 0 8px !important;
+}
+
+.nav-search-wrapper table, 
+.nav-search-wrapper td {
+  border: none !important;
+  background: transparent !important;
+}
+
+.nav-search-wrapper .gsc-branding {
+  display: none !important;
 }
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
