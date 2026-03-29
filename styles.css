@@ -5122,31 +5122,6 @@ body.accessibility-widget-visible ._access-menu {
   }
 }
 
-.index-faq-section [class*="answer"],
-.index-faq-section [class*="body"],
-.index-faq-section [class*="content"],
-.index-faq-section [class*="panel"] {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.35s ease;
-}
-
-.index-faq-section [class*="item"].open [class*="answer"],
-.index-faq-section [class*="item"].open [class*="body"],
-.index-faq-section [class*="item"].open [class*="content"],
-.index-faq-section [class*="item"].open [class*="panel"],
-.index-faq-section [class*="item"].active [class*="answer"],
-.index-faq-section [class*="item"].active [class*="body"] {
-  max-height: 500px;
-}
-
-.index-faq-section [class*="question"],
-.index-faq-section [class*="trigger"],
-.index-faq-section [class*="header"],
-.index-faq-section button {
-  cursor: pointer;
-}
-
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
