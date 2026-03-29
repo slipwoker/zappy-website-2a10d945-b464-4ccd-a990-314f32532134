@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
-
 
 
 /* Self-hosted fonts (Inter + Rubik for multi-language support) */
@@ -5133,11 +5131,40 @@ body.accessibility-widget-visible ._access-menu {
 /* /Zappy custom logo size */
 
 
-.navbar .nav-menu a {
-  font-family: 'Caveat', cursive !important;
-  font-size: 1.3rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.02em !important;
+.navbar, .navbar * {
+  font-family: 'Rubik', 'Heebo', 'Arial', sans-serif !important;
+}
+
+.index-hero-section, .index-hero-section * {
+  font-family: 'Rubik', 'Heebo', 'Arial', sans-serif !important;
+}
+
+.index-features-section, .index-features-section * {
+  font-family: 'Rubik', 'Heebo', 'Arial', sans-serif !important;
+}
+
+.index-benefits-section, .index-benefits-section * {
+  font-family: 'Rubik', 'Heebo', 'Arial', sans-serif !important;
+}
+
+.index-gallery-section, .index-gallery-section * {
+  font-family: 'Rubik', 'Heebo', 'Arial', sans-serif !important;
+}
+
+.index-testimonials-section, .index-testimonials-section * {
+  font-family: 'Rubik', 'Heebo', 'Arial', sans-serif !important;
+}
+
+.index-stats-section, .index-stats-section * {
+  font-family: 'Rubik', 'Heebo', 'Arial', sans-serif !important;
+}
+
+.index-contact-section, .index-contact-section * {
+  font-family: 'Rubik', 'Heebo', 'Arial', sans-serif !important;
+}
+
+.site-footer, .site-footer * {
+  font-family: 'Rubik', 'Heebo', 'Arial', sans-serif !important;
 }
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
