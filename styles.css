@@ -5122,13 +5122,47 @@ body.accessibility-widget-visible ._access-menu {
   }
 }
 
-:root {
-  --radius-sm: 0px;
-  --radius-card: 0px;
-  --radius-btn: 0px;
-  --radius-img: 0px;
-  --radius-badge: 0px;
-  --radius-input: 0px;
+.index-testimonials-section .index-testimonials-section__card {
+  border-radius: 0 !important;
+}
+
+.index-contact-section .index-contact-field input,
+.index-contact-section .index-contact-field textarea {
+  border-radius: 0 !important;
+}
+
+.index-contact-section .index-contact-submit {
+  border-radius: 0 !important;
+}
+
+.index-features-section .index-features-figure img {
+  border-radius: 0 !important;
+}
+
+.index-gallery-section .index-gallery-tile,
+.index-gallery-section .index-gallery-tile img,
+.index-gallery-section .index-gallery-tile figure,
+.index-gallery-section .tile-large img {
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+
+.index-stats-section .index-stat-card {
+  border-radius: 0 !important;
+}
+
+.index-benefits-section .index-benefits-map-card,
+.index-benefits-section .index-benefits-map-img,
+.index-benefits-section .index-benefits-peek-tile,
+.index-benefits-section .index-benefits-map-badge,
+.index-benefits-section .index-benefit-icon {
+  border-radius: 0 !important;
+}
+
+.index-hero-section .index-hero-card,
+.index-hero-section .index-hero-btn-primary,
+.index-hero-section .index-hero-btn-secondary {
+  border-radius: 0 !important;
 }
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
