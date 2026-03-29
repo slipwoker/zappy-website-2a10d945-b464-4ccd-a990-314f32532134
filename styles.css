@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&display=swap');
 
 
 
@@ -5133,13 +5133,18 @@ body.accessibility-widget-visible ._access-menu {
 /* /Zappy custom logo size */
 
 
-:root {
-  --font-heading: 'Rubik', 'Heebo', sans-serif;
-  --font-body: 'Heebo', 'Rubik', sans-serif;
+html body, html body * {
+  font-family: 'Frank Ruhl Libre', serif !important;
 }
 
-body {
-  font-family: 'Heebo', 'Rubik', sans-serif;
+html body h1, html body h2, html body h3, html body h4, html body h5, html body h6 {
+  font-family: 'Frank Ruhl Libre', serif !important;
+  font-weight: 400 !important;
+}
+
+html body p, html body span, html body a, html body li, html body div {
+  font-family: 'Frank Ruhl Libre', serif !important;
+  font-weight: 300 !important;
 }
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
