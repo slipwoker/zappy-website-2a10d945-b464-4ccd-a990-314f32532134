@@ -5122,6 +5122,296 @@ body.accessibility-widget-visible ._access-menu {
   }
 }
 
+/* AI-generated section */
+/* =============================================
+   FAQ SECTION — יעל רום 5 פתח תקווה
+   ============================================= */
+
+.faq-section {
+  background-color: var(--primary, #1F3A5F);
+  padding: 80px 20px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background texture */
+.faq-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(255,255,255,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 90% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Container */
+.faq-container {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Header ---- */
+.faq-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.faq-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.faq-subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0 auto 28px auto;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.faq-divider {
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, #5B9BD5, #A8D4F5);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* ---- FAQ List ---- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---- FAQ Item ---- */
+.faq-item {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item:hover {
+  background: rgba(255, 255, 255, 0.11);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+.faq-item.active {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(91, 155, 213, 0.5);
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* ---- FAQ Question Button ---- */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: right;
+  direction: rtl;
+  font-family: system-ui, sans-serif;
+  transition: background 0.2s ease;
+  border-radius: 14px;
+}
+
+.faq-question:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid #5B9BD5;
+  outline-offset: -2px;
+  border-radius: 14px;
+}
+
+.faq-question-text {
+  font-size: clamp(0.97rem, 2vw, 1.08rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* ---- FAQ Icon / Chevron ---- */
+.faq-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  background: rgba(91, 155, 213, 0.18);
+  color: #A8D4F5;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s ease, color 0.25s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  background: rgba(91, 155, 213, 0.35);
+  color: #ffffff;
+}
+
+/* ---- FAQ Answer ---- */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s ease,
+    padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.faq-answer-inner {
+  padding: 0 24px 24px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 18px;
+}
+
+.faq-answer-inner p {
+  font-size: clamp(0.92rem, 1.8vw, 1rem);
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.75;
+  margin: 0 0 12px 0;
+}
+
+.faq-answer-inner p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- CTA Block ---- */
+.faq-cta {
+  margin-top: 52px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.faq-cta-text {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.70);
+  margin: 0;
+  font-weight: 500;
+}
+
+.faq-cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #5B9BD5 0%, #3a7fc1 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 50px;
+  letter-spacing: 0.3px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+  box-shadow: 0 4px 20px rgba(91, 155, 213, 0.35);
+}
+
+.faq-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(91, 155, 213, 0.50);
+  background: linear-gradient(135deg, #6aaae0 0%, #4a8fd1 100%);
+}
+
+.faq-cta-btn:focus-visible {
+  outline: 2px solid #A8D4F5;
+  outline-offset: 3px;
+}
+
+.faq-cta-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 12px rgba(91, 155, 213, 0.30);
+}
+
+/* =============================================
+   RESPONSIVE — Mobile
+   ============================================= */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 56px 16px;
+  }
+
+  .faq-header {
+    margin-bottom: 36px;
+  }
+
+  .faq-question {
+    padding: 18px 18px;
+    gap: 12px;
+  }
+
+  .faq-answer-inner {
+    padding: 0 18px 20px 18px;
+    padding-top: 16px;
+  }
+
+  .faq-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  }
+
+  .faq-cta {
+    margin-top: 40px;
+  }
+
+  .faq-cta-btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-title {
+    font-size: 1.75rem;
+  }
+
+  .faq-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .faq-question-text {
+    font-size: 0.95rem;
+  }
+
+  .faq-answer-inner p {
+    font-size: 0.92rem;
+  }
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
