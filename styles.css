@@ -5156,6 +5156,12 @@ body.accessibility-widget-visible ._access-menu {
   opacity: 0.75;
 }
 
+.index-hero-section .index-hero-btn-primary,
+.index-hero-section .index-hero-btn-secondary {
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
