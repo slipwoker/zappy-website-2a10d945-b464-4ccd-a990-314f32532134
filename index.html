@@ -1554,6 +1554,54 @@
   </div>
 </section>
   </main>
+<script>
+(function() {
+  function initFaqAccordion() {
+    var items = document.querySelectorAll('.index-faq-item, .faq-item, [class*="faq-item"], [class*="faq__item"]');
+    if (!items.length) {
+      // fallback: find by data attribute or button inside faq section
+      var faqSection = document.querySelector('[data-layout-spec*="faq"], .index-faq-section, [class*="faq-section"]');
+      if (faqSection) {
+        items = faqSection.querySelectorAll('li, article, [class*="item"], [class*="question"]');
+      }
+    }
+    items.forEach(function(item) {
+      var btn = item.querySelector('button, [class*="question"], [class*="header"], [class*="trigger"], summary, h3, h4');
+      var answer = item.querySelector('[class*="answer"], [class*="body"], [class*="content"], [class*="panel"], p');
+      if (!btn || !answer) return;
+      // Set initial state
+      answer.style.overflow = 'hidden';
+      if (!item.classList.contains('open') && !item.classList.contains('active') && !item.hasAttribute('open')) {
+        answer.style.maxHeight = '0';
+        answer.style.transition = 'max-height 0.3s ease, padding 0.3s ease';
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+      btn.style.cursor = 'pointer';
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var isOpen = item.classList.contains('open') || item.classList.contains('active');
+        // Close all
+        items.forEach(function(other) {
+          var otherAnswer = other.querySelector('[class*="answer"], [class*="body"], [class*="content"], [class*="panel"], p');
+          if (otherAnswer) { otherAnswer.style.maxHeight = '0'; }
+          other.classList.remove('open', 'active');
+        });
+        // Open this one if it was closed
+        if (!isOpen) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          item.classList.add('open');
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFaqAccordion);
+  } else {
+    initFaqAccordion();
+  }
+})();
+</script>
   
   <footer class="site-footer" dir="rtl">
   <div class="footer-top">
