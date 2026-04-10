@@ -5391,6 +5391,257 @@ body.accessibility-widget-visible ._access-menu {
   padding: 0 !important;
 }
 
+/* AI-generated section */
+/* ===== Location Map Section ===== */
+.loc-map-section {
+  background: #f4f7fb;
+  padding: 90px 20px 80px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+.loc-map-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ---- Header ---- */
+.loc-map-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.loc-map-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  background: var(--primary, #1F3A5F);
+  border-radius: 50%;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.loc-map-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: #ffffff;
+}
+
+.loc-map-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary, #1F3A5F);
+  margin: 0 0 14px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.loc-map-description {
+  font-size: 1.1rem;
+  color: #4a5a72;
+  margin: 0 auto;
+  max-width: 520px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.loc-map-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--primary, #1F3A5F);
+  border-radius: 2px;
+  margin: 22px auto 0;
+  opacity: 0.25;
+}
+
+/* ---- Detail Row ---- */
+.loc-map-details-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.loc-map-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(31, 58, 95, 0.15);
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--primary, #1F3A5F);
+  box-shadow: 0 2px 8px rgba(31, 58, 95, 0.07);
+  transition: box-shadow 0.25s ease, transform 0.22s ease;
+}
+
+.loc-map-detail-item:hover {
+  box-shadow: 0 6px 18px rgba(31, 58, 95, 0.14);
+  transform: translateY(-2px);
+}
+
+.loc-map-detail-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary, #1F3A5F);
+}
+
+.loc-map-detail-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--primary, #1F3A5F);
+}
+
+/* ---- Map Frame ---- */
+.loc-map-frame-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 4px 24px rgba(31, 58, 95, 0.13),
+    0 1px 4px rgba(31, 58, 95, 0.08);
+  border: 1px solid rgba(31, 58, 95, 0.12);
+  background: #dde6f0;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.loc-map-frame-wrapper:hover {
+  box-shadow:
+    0 8px 36px rgba(31, 58, 95, 0.18),
+    0 2px 8px rgba(31, 58, 95, 0.1);
+}
+
+.loc-map-iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 0;
+}
+
+/* ---- CTA Row ---- */
+.loc-map-cta-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.loc-map-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--primary, #1F3A5F);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 16px rgba(31, 58, 95, 0.25);
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.22s ease,
+    border-color 0.25s ease;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+}
+
+.loc-map-cta-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: #ffffff;
+  flex-shrink: 0;
+  transition: stroke 0.25s ease;
+}
+
+.loc-map-cta-btn:hover,
+.loc-map-cta-btn:focus-visible {
+  background: #ffffff;
+  color: var(--primary, #1F3A5F);
+  border-color: var(--primary, #1F3A5F);
+  box-shadow: 0 8px 28px rgba(31, 58, 95, 0.22);
+  transform: translateY(-2px);
+}
+
+.loc-map-cta-btn:hover svg,
+.loc-map-cta-btn:focus-visible svg {
+  stroke: var(--primary, #1F3A5F);
+}
+
+.loc-map-cta-btn:focus-visible {
+  outline: 3px solid rgba(31, 58, 95, 0.45);
+  outline-offset: 3px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .loc-map-section {
+    padding: 60px 16px 56px;
+  }
+
+  .loc-map-title {
+    font-size: 1.7rem;
+  }
+
+  .loc-map-description {
+    font-size: 1rem;
+  }
+
+  .loc-map-details-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .loc-map-detail-item {
+    width: 100%;
+    max-width: 340px;
+    justify-content: flex-start;
+  }
+
+  .loc-map-iframe {
+    height: 340px;
+  }
+
+  .loc-map-cta-btn {
+    width: 100%;
+    max-width: 340px;
+    justify-content: center;
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loc-map-title {
+    font-size: 1.45rem;
+  }
+
+  .loc-map-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .loc-map-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .loc-map-iframe {
+    height: 280px;
+  }
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
