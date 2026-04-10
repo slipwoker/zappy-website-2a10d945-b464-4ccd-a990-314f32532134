@@ -393,12 +393,12 @@
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;&amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') && bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;&amp; bgImage !== 'none') {
+      if (bgImage && bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -411,7 +411,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;&amp; rgb.length &gt;= 3) {
+    if (rgb && rgb.length >= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -547,7 +547,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &lt;= 768;
+      const isMobileViewport = window.innerWidth <= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -738,7 +738,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &gt; 0 
+        const phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '0522972222';
         
@@ -755,7 +755,7 @@
     const handleWhatsAppVisibility = function() {
       const whatsappBtn = document.querySelector('.whatsapp-float');
       if (whatsappBtn) {
-        const isDesktop = window.innerWidth &gt;= 769;
+        const isDesktop = window.innerWidth >= 769;
         if (isDesktop) {
           whatsappBtn.style.setProperty('display', 'none', 'important');
           whatsappBtn.style.setProperty('visibility', 'hidden', 'important');
@@ -803,7 +803,7 @@
       <span class="index-hero-label">פתח תקווה, ישראל</span>
 
       <!-- Main Headline -->
-      <h1 class="index-hero-title">יעל רום 5<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span class="index-hero-title-sub">פתח תקווה</span></h1>
+      <h1 class="index-hero-title">יעל רום 5<br><span class="index-hero-title-sub">פתח תקווה</span></h1>
 
       <!-- Subtitle -->
       <h3 class="index-hero-subtitle">בניין מגורים מוקפד במיקום מרכזי — הזדמנות נדל"ן נדירה לרכישה ולהשכרה</h3>
@@ -822,7 +822,7 @@
   <!-- Bottom Divider -->
   <div class="index-hero-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,90 L0,55 Q150,30 300,48 T600,38 Q800,28 1000,46 T1200,42 L1200,90 Z" fill="#FAF9F6"></path>
+      <path d="M0,90 L0,55 Q150,30 300,48 T600,38 Q800,28 1000,46 T1200,42 L1200,90 Z" fill="var(--bg-light)"></path>
     </svg>
   </div>
 </section>
@@ -870,7 +870,7 @@
       <!-- Intro -->
       <div class="index-features-intro">
         <p><span class="index-features-label">יתרונות הנכס</span>
-        </p><h2 class="index-features-heading">חיים נוחים ומשתלמים<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ביעל רום 5 פתח תקווה</h2>
+        </p><h2 class="index-features-heading">חיים נוחים ומשתלמים ביעל רום 5 פתח תקווה</h2>
         <p class="index-features-desc">הבניין ברחוב יעל רום 5 מציע שילוב נדיר של סביבת מגורים שקטה ומטופחת, נגישות מלאה למרכז העיר, ותשתית איכותית שהופכת כל דירה לבחירה בטוחה — בין אם לדיור עצמי ובין אם להשקעה לטווח ארוך.</p>
       </div>
 
@@ -970,13 +970,13 @@
     <!-- START column: text + benefits -->
     <div class="index-benefits-content">
       <div class="index-benefits-header">
-        <span class="index-benefits-label">מיקום ואיכות חיים</span>
-        <h2 class="index-benefits-title">יעל רום 5 פתח תקווה —<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>כתובת שחיה את עצמה</h2>
+        <p><span class="index-benefits-label">מיקום ואיכות חיים</span>
+        </p><h2 class="index-benefits-title" >יעל רום 5 פתח תקווה — כתובת שחיה את עצמה</h2>
         <p class="index-benefits-intro">הבניין ממוקם בלב שכונה שקטה ומבוססת בפתח תקווה, המאזנת בין נגישות עירונית מלאה לאווירה שכונתית אנושית. כל מה שצריך — במרחק הליכה או נסיעה קצרה.</p>
       </div>
 
       <ul class="index-benefits-list">
-        <li class="index-benefit-row">
+        <li class="index-benefit-row zappy-grid-item-nested-grid" data-grid-item-index="0">
           <div class="index-benefit-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M14 4C10.134 4 7 7.134 7 11c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
@@ -989,7 +989,7 @@
           </div>
         </li>
 
-        <li class="index-benefit-row">
+        <li class="index-benefit-row zappy-grid-item-nested-grid" data-grid-item-index="1">
           <div class="index-benefit-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <rect x="4" y="10" width="20" height="12" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
@@ -1003,7 +1003,7 @@
           </div>
         </li>
 
-        <li class="index-benefit-row">
+        <li class="index-benefit-row zappy-grid-item-nested-grid" data-grid-item-index="2">
           <div class="index-benefit-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M5 14h18M5 10h18M5 18h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
@@ -1016,7 +1016,7 @@
           </div>
         </li>
 
-        <li class="index-benefit-row">
+        <li class="index-benefit-row zappy-grid-item-nested-grid" data-grid-item-index="3">
           <div class="index-benefit-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M14 5c0 0-7 4.5-7 10a7 7 0 0 0 14 0C21 9.5 14 5 14 5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
@@ -1029,7 +1029,7 @@
           </div>
         </li>
 
-        <li class="index-benefit-row">
+        <li class="index-benefit-row zappy-grid-item-nested-grid" data-grid-item-index="4">
           <div class="index-benefit-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M4 22V10l10-6 10 6v12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
@@ -1048,7 +1048,7 @@
     <!-- END column: map + peeking photo tile -->
     <div class="index-benefits-visual">
       <div class="index-benefits-map-card">
-        <img data-placeholder="index-benefits-image-1" data-context="A polished, brochure-style illustrated map of the Petah Tikva neighborhood around Yael Rom Street. Clean minimal cartographic style with soft warm tones, showing nearby streets, parks, schools, and landmarks. Navy pins mark key points of interest. The style is premium real-estate marketing — not a screenshot of Google Maps but a refined, curated neighborhood overview." width="560" height="460" src="/assets/site-index-benefits-image-1.webp" alt="מפת שכונת יעל רום, פתח תקווה — מיקום הבניין ונקודות עניין סמוכות" class="index-benefits-map-img">
+        <img data-placeholder="index-benefits-image-1" data-context="A polished, brochure-style illustrated map of the Petah Tikva neighborhood around Yael Rom Street. Clean minimal cartographic style with soft warm tones, showing nearby streets, parks, schools, and landmarks. Navy pins mark key points of interest. The style is premium real-estate marketing — not a screenshot of Google Maps but a refined, curated neighborhood overview." width="560" height="460" src="/assets/site-index-benefits-image-1.webp" alt="מפת שכונת יעל רום, פתח תקווה — מיקום הבניין ונקודות עניין סמוכות" class="index-benefits-map-img" data-element-type="image" data-element-id="img-1775835466115-kaax5vdwr" >
         <div class="index-benefits-map-badge">
           <svg data-element-type="icon" data-icon-type="svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="7" cy="6" r="2.5" stroke="currentColor" stroke-width="1.4"></circle>
@@ -1060,7 +1060,7 @@
 
       <!-- Peeking photo tile -->
       <div class="index-benefits-peek-tile">
-        <img data-placeholder="index-benefits-image-2" data-context="A warm street-level photograph of a pleasant residential street in Petah Tikva, Israel. Tree-lined sidewalk with dappled sunlight, local shops or greenery visible, calm and inviting atmosphere. Suitable for a premium real-estate brochure conveying livability and daily convenience." width="200" height="160" src="/assets/site-index-benefits-image-2.webp" alt="רחוב שכונתי נעים בפתח תקווה — תמונת סביבה" class="index-benefits-peek-img">
+        <img data-placeholder="index-benefits-image-2" data-context="A warm street-level photograph of a pleasant residential street in Petah Tikva, Israel. Tree-lined sidewalk with dappled sunlight, local shops or greenery visible, calm and inviting atmosphere. Suitable for a premium real-estate brochure conveying livability and daily convenience." width="200" height="160" src="/assets/site-index-benefits-image-2.webp" alt="רחוב שכונתי נעים בפתח תקווה — תמונת סביבה" class="index-benefits-peek-img" data-element-type="image" data-element-id="img-1775835466115-4r1m5gfyu" >
       </div>
     </div>
 
@@ -1216,7 +1216,7 @@
     <!-- Intro Block -->
     <div class="index-stats-intro">
       <span class="index-stats-label">עובדות ומספרים</span>
-      <h2 class="index-stats-heading">יעל רום 5 פתח תקווה –<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>כל מה שחשוב לדעת</h2>
+      <h2 class="index-stats-heading">יעל רום 5 פתח תקווה – כל מה שחשוב לדעת</h2>
       <p class="index-stats-subtext">הבניין ממוקם בלב פתח תקווה, מציע נגישות מיידית לכל מה שחשוב – תחבורה, מסחר, חינוך ופנאי. הנה הנתונים שמדברים בעד עצמם.</p>
     </div>
 
