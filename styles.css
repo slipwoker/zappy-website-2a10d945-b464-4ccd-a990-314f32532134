@@ -2409,48 +2409,45 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   margin-top: 40px;
 }
 
-/* Location Label */
 .index-hero-section .index-hero-label {
   display: inline-block;
   font-family: 'Rubik', sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #8FA39A;
   text-align: right;
   margin-bottom: 14px;
   padding-inline-start: 0;
 }
 
-/* Main Title */
 .index-hero-section .index-hero-title {
   font-family: 'Rubik', sans-serif;
-  font-size: 52px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   line-height: 1.1;
-  color: var(--text-dark);
+  color: #FFFFFF;
   text-align: right;
   margin: 0 0 6px 0;
 }
 
 .index-hero-section .index-hero-title-sub {
   font-family: 'Rubik', sans-serif;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 300;
-  letter-spacing: 0.01em;
-  color: var(--primary);
+  letter-spacing: 0.02em;
+  color: #8FA39A;
   display: block;
 }
 
-/* Subtitle */
 .index-hero-section .index-hero-subtitle {
   font-family: 'Rubik', sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
-  line-height: 1.7;
-  color: #5E6670;
+  line-height: 1.75;
+  color: rgba(250, 249, 246, 0.78);
   text-align: right;
   margin: 18px 0 28px 0;
 }
@@ -2465,54 +2462,53 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   justify-content: flex-start;
 }
 
-/* Primary CTA */
 .index-hero-section .index-hero-btn-primary {
   display: inline-block;
-  background: var(--primary);
+  background: linear-gradient(135deg, #2a6049 0%, #1F5F3A 100%);
   color: var(--text-light);
   font-family: 'Rubik', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-decoration: none;
-  padding: 14px 32px;
-  border-radius: 8px;
-  border: 1px solid var(--primary);
-  box-shadow: 0 2px 6px rgba(31, 59, 102, 0.16);
+  padding: 16px 36px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(31, 95, 58, 0.45);
   transition: all 0.25s ease;
   white-space: nowrap;
 }
 
 .index-hero-section .index-hero-btn-primary:hover {
-  background: #162d4a;
+  background: linear-gradient(135deg, #337055 0%, #2a6049 100%);
   border-color: #162d4a;
-  box-shadow: 0 18px 42px rgba(31, 59, 102, 0.22);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(31, 95, 58, 0.55);
+  transform: translateY(-3px);
 }
 
-/* Secondary CTA */
 .index-hero-section .index-hero-btn-secondary {
   display: inline-block;
-  background: #FFFFFF;
-  color: #5F6873;
+  background: rgba(255, 255, 255, 0.1);
+  color: #FAF9F6;
   font-family: 'Rubik', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 8px;
-  border: 1px solid var(--border-light);
+  padding: 16px 32px;
+  border-radius: 10px;
+  border: 1px solid rgba(250, 249, 246, 0.35);
   box-shadow: 0 2px 6px rgba(86, 74, 54, 0.08);
   transition: all 0.25s ease;
   white-space: nowrap;
+  backdrop-filter: blur(8px);
 }
 
 .index-hero-section .index-hero-btn-secondary:hover {
-  background: var(--secondary);
-  border-color: #c5bba8;
-  box-shadow: 0 8px 24px rgba(73, 55, 33, 0.10);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(250, 249, 246, 0.6);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
 }
 
 /* Trust Line */
@@ -5640,6 +5636,26 @@ body.accessibility-widget-visible ._access-menu {
   .loc-map-iframe {
     height: 280px;
   }
+}
+
+.index-hero-section .index-hero-card .index-hero-label font,
+.index-hero-section .index-hero-card .index-hero-label {
+  color: #8FA39A !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-title {
+  color: #FFFFFF !important;
+  font-size: 58px !important;
+  font-weight: 700 !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-title-sub {
+  color: #8FA39A !important;
+  font-size: 40px !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-subtitle {
+  color: rgba(250, 249, 246, 0.82) !important;
 }
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
