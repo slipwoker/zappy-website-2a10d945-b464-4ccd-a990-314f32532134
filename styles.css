@@ -5658,6 +5658,46 @@ body.accessibility-widget-visible ._access-menu {
   color: rgba(250, 249, 246, 0.82) !important;
 }
 
+#hero .v1-content-side {
+  justify-content: center;
+  min-height: 100vh;
+  padding: 120px 60px 80px;
+}
+
+#hero .v1-image-side {
+  min-height: 100vh;
+  flex: 1.4;
+}
+
+#hero .v1-image-overlay {
+  background: linear-gradient(to right, #1F3A5F 0%, rgba(31,58,95,0.4) 40%, transparent 70%) !important;
+}
+
+#hero .v1-content-side::after {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 0;
+  width: 56px;
+  height: 100%;
+  background: #1F3A5F;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+#hero .v1-content-side {
+  min-height: unset;
+  padding: 52px 28px 60px;
+}
+
+#hero .v1-image-side {
+  min-height: 55vw;
+  flex: none;
+  height: 55vw;
+  max-height: 420px;
+}
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */

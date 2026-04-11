@@ -933,44 +933,60 @@
       </div>
     </div>
   </div>
-</section><section id="hero" class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim">
-  <!-- Background Image Layer -->
-  <div class="index-hero-bg">
-    <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Daytime architectural exterior photograph of a modern residential apartment building in Petah Tikva, Israel. Bright sunny day with clear blue sky, lush street trees, clean sidewalk with parked cars, warm sunlight casting soft shadows on the building facade. The building has contemporary Israeli residential architecture with balconies, stone cladding, and large windows. Street-level context showing a pleasant urban neighborhood. Wide-angle shot emphasizing the full building height and its surroundings." width="1200" height="800" src="/assets/site-index-hero-image-1-1774798389959-saiewd.webp?v=1774798389959" alt="בניין יעל רום 5 פתח תקווה - חזית הבניין" data-hero-background="true" data-element-type="image" data-element-id="img-1775881426944-ytbacktm5">
-  </div>
+</section><section id="hero" class="v1-hero" data-layout-spec="בית-hero" dir="rtl">
+  <style>
+    .v1-hero { display: flex; flex-direction: row; min-height: 100vh; background: #FAF9F6; font-family: 'Rubik', sans-serif; overflow: hidden; }
+    .v1-content-side { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 80px 56px; background: #1F3A5F; position: relative; z-index: 2; }
+    .v1-content-side::after { content: ''; position: absolute; left: -30px; top: 0; width: 60px; height: 100%; background: #1F3A5F; z-index: 1; }
+    .v1-badge { display: inline-block; background: rgba(143,163,154,0.25); color: #D9D2C3; font-size: 11px; font-weight: 700; letter-spacing: 3px; padding: 6px 18px; border-radius: 30px; margin-bottom: 28px; text-transform: uppercase; border: 1px solid rgba(143,163,154,0.4); }
+    .v1-main-title { font-size: clamp(40px, 5vw, 70px); font-weight: 900; color: #FAF9F6; line-height: 1.05; margin: 0 0 10px 0; letter-spacing: -1px; }
+    .v1-city { display: block; color: #8FA39A; font-size: clamp(26px, 3.5vw, 46px); font-weight: 300; letter-spacing: 2px; margin-top: 4px; }
+    .v1-divider-line { width: 60px; height: 3px; background: linear-gradient(to left, #8FA39A, transparent); margin: 24px 0; border-radius: 2px; }
+    .v1-subtitle { font-size: clamp(15px, 1.6vw, 18px); color: rgba(217,210,195,0.85); line-height: 1.8; margin: 0 0 32px 0; max-width: 420px; }
+    .v1-location { color: #8FA39A; font-size: 14px; margin-bottom: 40px; display: flex; align-items: center; gap: 8px; font-weight: 500; }
+    .v1-location-icon { font-size: 16px; }
+    .v1-cta-group { display: flex; gap: 14px; flex-wrap: wrap; }
+    .v1-btn-primary { background: #D9D2C3; color: #1F3A5F; padding: 15px 36px; border-radius: 4px; text-decoration: none; font-weight: 800; font-size: 15px; transition: all 0.3s; letter-spacing: 0.5px; }
+    .v1-btn-primary:hover { background: #FAF9F6; transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.25); }
+    .v1-btn-secondary { background: transparent; color: #D9D2C3; padding: 15px 32px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 15px; border: 1.5px solid rgba(143,163,154,0.5); transition: all 0.3s; }
+    .v1-btn-secondary:hover { background: rgba(143,163,154,0.15); border-color: #8FA39A; color: #FAF9F6; }
+    .v1-image-side { flex: 1.3; position: relative; overflow: hidden; }
+    .v1-hero-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 8s ease; }
+    .v1-hero:hover .v1-hero-img { transform: scale(1.04); }
+    .v1-image-overlay { position: absolute; inset: 0; background: linear-gradient(to right, #1F3A5F 0%, rgba(31,58,95,0.3) 35%, transparent 60%); }
+    .v1-image-badge { position: absolute; bottom: 40px; right: 40px; background: rgba(31,58,95,0.82); backdrop-filter: blur(12px); border: 1px solid rgba(143,163,154,0.35); color: #D9D2C3; padding: 14px 22px; border-radius: 12px; font-size: 13px; font-weight: 600; line-height: 1.5; }
+    .v1-image-badge strong { display: block; font-size: 20px; font-weight: 900; color: #FAF9F6; }
+    @media (max-width: 900px) {
+      .v1-hero { flex-direction: column-reverse; }
+      .v1-image-side { height: 55vw; min-height: 260px; max-height: 420px; flex: none; }
+      .v1-content-side { padding: 48px 28px 56px; flex: none; }
+      .v1-content-side::after { display: none; }
+      .v1-image-overlay { background: linear-gradient(to top, #1F3A5F 0%, transparent 50%); }
+      .v1-image-badge { bottom: 20px; right: 20px; }
+    }
+  </style>
 
-  <!-- Scrim Overlay -->
-  <div class="index-hero-scrim" aria-hidden="true"></div>
-
-  <!-- Content Card -->
-  <div class="index-hero-container">
-    <div class="index-hero-card" style="background: linear-gradient(145deg, rgba(15, 22, 40, 0.88) 0%, rgba(31, 58, 95, 0.82) 100%); backdrop-filter: blur(24px); border: 1px solid rgba(143, 163, 154, 0.45); border-radius: 28px; padding: 52px 48px 44px; box-shadow: 0 32px 80px rgba(10, 18, 35, 0.55), inset 0 0 0 1px rgba(255,255,255,0.07)">
-      <!-- Location Label -->
-      <p><span class="index-hero-label" >פתח תקווה, ישראל</span>
-
-      
-      </p><!-- Main Headline --><h1 class="index-hero-title" >יעל רום 5<br><span class="index-hero-title-sub">פתח תקווה</span></h1>
-
-      <!-- Subtitle -->
-      <h3 class="index-hero-subtitle">בניין מגורים מוקפד במיקום מרכזי — הזדמנות נדל"ן נדירה לרכישה ולהשכרה</h3>
-
-      <!-- CTA Buttons -->
-      <div class="index-hero-ctas">
-        <a href="#contact" class="index-hero-btn-primary" data-element-type="button" data-element-id="btn-1775881426942-w390s2amy" data-native-element="true">לפרטים נוספים</a>
-        <a href="#contact" class="index-hero-btn-secondary" data-element-type="button" data-element-id="btn-1775881426942-wfxw0fo48" data-native-element="true">קביעת ביקור</a>
-      </div>
-
-      <!-- Trust Line -->
-      
+  <div class="v1-content-side">
+    <div class="v1-badge">נדל"ן פרימיום • פתח תקווה</div>
+    <h1 class="v1-main-title">יעל רום 5<span class="v1-city">פתח תקווה</span></h1>
+    <div class="v1-divider-line"></div>
+    <p class="v1-subtitle">בניין מגורים מוקפד במיקום מרכזי — הזדמנות נדל"ן נדירה לרכישה ולהשכרה</p>
+    <div class="v1-location"><span class="v1-location-icon">📍</span> פתח תקווה, ישראל</div>
+    <div class="v1-cta-group">
+      <a href="#contact" class="v1-btn-primary" data-element-type="button" data-element-id="btn-1775881426942-w390s2amy">לפרטים נוספים</a>
+      <a href="#contact" class="v1-btn-secondary" data-element-type="button" data-element-id="btn-1775881426942-wfxw0fo48">קביעת ביקור</a>
     </div>
   </div>
 
-  <!-- Bottom Divider -->
-  <div class="index-hero-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,90 L0,55 Q150,30 300,48 T600,38 Q800,28 1000,46 T1200,42 L1200,90 Z" fill="#FAF9F6"></path>
-    </svg>
+  <div class="v1-image-side">
+    <img src="/assets/site-index-hero-image-1-1774798389959-saiewd.webp?v=1774798389959" alt="בניין יעל רום 5 פתח תקווה - חזית הבניין" class="v1-hero-img" data-hero-bg="true" data-element-type="image" data-element-id="img-1775881426944-ytbacktm5">
+    <div class="v1-image-overlay"></div>
+    <div class="v1-image-badge">
+      <strong>יעל רום 5</strong>
+      פתח תקווה, ישראל
+    </div>
   </div>
+
 </section>
 
 <section id="partners-section" class="partners-strip" aria-label="שותפים ומותגים" style="background-color: #FAF9F6; position: relative; overflow: hidden; --zappy-bg-color: #FAF9F6" data-zappy-bg-type="color" data-zappy-bg-color="#FAF9F6" data-zappy-bg-image="" data-zappy-bg-overlay-color="#000000" data-zappy-bg-overlay-opacity="30" data-zappy-bg-video-type="" data-zappy-bg-video-url="">
