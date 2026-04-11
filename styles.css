@@ -5311,7 +5311,7 @@ body.accessibility-widget-visible ._access-menu {
 }
 
 #partners-section .partners-strip__link {
-  background-color: rgb(247, 248, 250) !important;
+  background-color: transparent !important;
   box-shadow: none !important;
   border: none !important;
   padding: 8px 16px !important;
