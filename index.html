@@ -400,12 +400,12 @@
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;amp;&amp;amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') &amp;amp;amp;amp;amp;&amp;amp;amp;amp;amp; bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;amp;&amp;amp; bgImage !== 'none') {
+      if (bgImage &amp;amp;amp;amp;amp;&amp;amp;amp;amp;amp; bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -418,7 +418,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;amp;&amp;amp; rgb.length &amp;gt;= 3) {
+    if (rgb &amp;amp;amp;amp;amp;&amp;amp;amp;amp;amp; rgb.length &amp;amp;amp;amp;gt;= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -554,7 +554,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &amp;lt;= 768;
+      const isMobileViewport = window.innerWidth &amp;amp;amp;amp;lt;= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -745,7 +745,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &amp;gt; 0 
+        const phoneNumber = phoneLinks.length &amp;amp;amp;amp;gt; 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '0522972222';
         
@@ -762,7 +762,7 @@
     const handleWhatsAppVisibility = function() {
       const whatsappBtn = document.querySelector('.whatsapp-float');
       if (whatsappBtn) {
-        const isDesktop = window.innerWidth &amp;gt;= 769;
+        const isDesktop = window.innerWidth &amp;amp;amp;amp;gt;= 769;
         if (isDesktop) {
           whatsappBtn.style.setProperty('display', 'none', 'important');
           whatsappBtn.style.setProperty('visibility', 'hidden', 'important');
@@ -810,7 +810,7 @@
       <span class="index-hero-label">פתח תקווה, ישראל</span>
 
       <!-- Main Headline -->
-      <h1 class="index-hero-title">יעל רום 5<br></br><br></br><span class="index-hero-title-sub">פתח תקווה</span></h1>
+      <h1 class="index-hero-title">יעל רום 5<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><span class="index-hero-title-sub">פתח תקווה</span></h1>
 
       <!-- Subtitle -->
       <h3 class="index-hero-subtitle">בניין מגורים מוקפד במיקום מרכזי — הזדמנות נדל"ן נדירה לרכישה ולהשכרה</h3>
@@ -840,13 +840,13 @@
 
       <li class="partners-strip__item">
         <a href="https://www.phoenix.co.il" target="_blank" rel="noopener noreferrer" class="partners-strip__link" aria-label="הפניקס Smart - עבור לאתר">
-          <img src="/assets/image-1775822008006-vwp64z.webp?v=1775822008006" alt="הפניקס Smart לוגו" class="partners-strip__logo" data-placeholder="partners-phoenix-logo" data-context="הפניקס Smart insurance company logo, professional corporate branding, blue and orange colors, clean white background"></img>
+          <img src="/assets/image-remove_background-1775881240269-hla8zy.png?v=1775881240269" alt="הפניקס Smart לוגו" class="partners-strip__logo" data-placeholder="partners-phoenix-logo" data-context="הפניקס Smart insurance company logo, professional corporate branding, blue and orange colors, clean white background"></img>
         </a>
       </li>
 
       <li class="partners-strip__item">
         <a href="https://www.migdal.co.il" target="_blank" rel="noopener noreferrer" class="partners-strip__link" aria-label="מגדל - עבור לאתר">
-          <img src="/assets/image-remove_background-1775880586217-7aob6r.png?v=1775880586217" alt="מגדל לוגו" class="partners-strip__logo" data-placeholder="partners-migdal-logo" data-context="Migdal מגדל Israeli insurance and finance company logo, corporate branding, clean white background"></img>
+          <img src="/assets/image-remove_background-remove_background-1775881269545-mktck9.png?v=1775881269545" alt="מגדל לוגו" class="partners-strip__logo" data-placeholder="partners-migdal-logo" data-context="Migdal מגדל Israeli insurance and finance company logo, corporate branding, clean white background"></img>
         </a>
       </li>
 
@@ -858,7 +858,7 @@
 
       <li class="partners-strip__item">
         <a href="https://passportcard.co.il" target="_blank" rel="noopener noreferrer" class="partners-strip__link" aria-label="PassportCard - עבור לאתר">
-          <img src="/assets/image-1775822067471-muwbot.webp?v=1775822067471" alt="PassportCard לוגו" class="partners-strip__logo" data-placeholder="partners-passportcard-logo" data-context="PassportCard travel insurance company logo, modern branding with card and passport motif, clean white background"></img>
+          <img src="/assets/image-remove_background-1775881294712-f6h3c8.png?v=1775881294712" alt="PassportCard לוגו" class="partners-strip__logo" data-placeholder="partners-passportcard-logo" data-context="PassportCard travel insurance company logo, modern branding with card and passport motif, clean white background"></img>
         </a>
       </li>
 
@@ -1337,7 +1337,7 @@
     </div>
 
     <div class="loc-map-frame-wrapper">
-      <iframe class="loc-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3379.0!2d34.8876!3d32.0879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b9b9b9b9b9b%3A0x0!2z15nXkdeUINepXdeg15kg15UgNSDXpNiqXdeg15Ag16rXqdeqXdeg15XXldeT!5e0!3m2!1siw!2sil!4v1700000000000!5m2!1siw!2sil&amp;amp;amp;q=יעל+רום+5+פתח+תקווה+ישראל" width="100%" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="מפת גוגל — יעל רום 5, פתח תקווה" aria-label="מפת גוגל המציגה את מיקום הבניין ברחוב יעל רום 5, פתח תקווה"></iframe>
+      <iframe class="loc-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3379.0!2d34.8876!3d32.0879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b9b9b9b9b9b%3A0x0!2z15nXkdeUINepXdeg15kg15UgNSDXpNiqXdeg15Ag16rXqdeqXdeg15XXldeT!5e0!3m2!1siw!2sil!4v1700000000000!5m2!1siw!2sil&amp;amp;amp;amp;amp;amp;q=יעל+רום+5+פתח+תקווה+ישראל" width="100%" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="מפת גוגל — יעל רום 5, פתח תקווה" aria-label="מפת גוגל המציגה את מיקום הבניין ברחוב יעל רום 5, פתח תקווה"></iframe>
     </div>
 
     <div class="loc-map-cta-row">
