@@ -333,7 +333,7 @@
     </svg>
   </button>
 
-  <button class="phone-header-btn" data-phone="0522972222" aria-label="Call">
+  <button class="phone-header-btn" data-phone="[business_phone]" aria-label="Call">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
@@ -349,10 +349,6 @@
     
 
     <div class="nav-cta-container">
-      <div class="nav-search-wrapper">
-        <script async="" src="https://cse.google.com/cse.js?cx=713c0ea285e9e4eed"></script>
-        <div class="gcse-search"></div>
-      </div>
       <a href="#contact" class="nav-cta-btn">צור קשר</a>
     </div>
   </div>
@@ -740,7 +736,7 @@
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
         const phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
-          : '0522972222';
+          : '[business_phone]';
         
         window.location.href = 'tel:' + phoneNumber;
         console.log('[Navbar] Phone button clicked');
@@ -787,241 +783,60 @@
 </script>
   
   <main>
-    <section id="announcement-bar-realestate" style="width:100%;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;direction:rtl;">
-  <style>
-    #announcement-bar-realestate * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <section id="hero" class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim">
+  <!-- Background Image Layer -->
+  <div class="index-hero-bg">
+    <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Daytime architectural exterior photograph of a modern residential apartment building in Petah Tikva, Israel. Bright sunny day with clear blue sky, lush street trees, clean sidewalk with parked cars, warm sunlight casting soft shadows on the building facade. The building has contemporary Israeli residential architecture with balconies, stone cladding, and large windows. Street-level context showing a pleasant urban neighborhood. Wide-angle shot emphasizing the full building height and its surroundings." width="1200" height="800" src="/assets/site-index-hero-image-1.webp" alt="בניין יעל רום 5 פתח תקווה - חזית הבניין">
+  </div>
 
-    #announcement-bar-realestate .ann-bar {
-      background: #1F5F3A;
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-    }
+  <!-- Scrim Overlay -->
+  <div class="index-hero-scrim" aria-hidden="true"></div>
 
-    #announcement-bar-realestate .ann-bar__container {
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
+  <!-- Content Card -->
+  <div class="index-hero-container">
+    <div class="index-hero-card">
+      <!-- Location Label -->
+      <span class="index-hero-label">פתח תקווה, ישראל 🎉</span>
 
-    #announcement-bar-realestate .ann-bar__wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      position: relative;
-    }
+      <!-- Main Headline -->
+      <h1 class="index-hero-title">יעל רום 5<br><span class="index-hero-title-sub">פתח תקווה</span></h1>
 
-    #announcement-bar-realestate .ann-bar__slider-wrap {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-    }
+      <!-- Subtitle -->
+      <h3 class="index-hero-subtitle">הבית שחיכיתם לו 🏠 שפשוט עושה הכל נכון — במיקום שווה בטירוף! הזדמנות כזו לא מחכה 😍</h3>
 
-    #announcement-bar-realestate .ann-bar__track {
-      display: flex;
-      width: 100%;
-      animation: annSlide 12s infinite;
-    }
+      <!-- CTA Buttons -->
+      <div class="index-hero-ctas">
+        <a href="#contact" class="index-hero-btn-primary">רוצים לדעת עוד? בואו! 👇</a>
+        <a href="#contact" class="index-hero-btn-secondary">בואו לראות במו עיניכם! 🗓️</a>
+      </div>
 
-    #announcement-bar-realestate .ann-bar__slide {
-      min-width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-    }
-
-    #announcement-bar-realestate .ann-bar__text {
-      color: #D9E8D2;
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      line-height: 1.5;
-    }
-
-    #announcement-bar-realestate .ann-bar__text::before {
-      content: "✦";
-      color: #6A9E7A;
-      font-size: 10px;
-      flex-shrink: 0;
-    }
-
-    #announcement-bar-realestate .ann-bar__text::after {
-      content: "✦";
-      color: #6A9E7A;
-      font-size: 10px;
-      flex-shrink: 0;
-    }
-
-    @keyframes annSlide {
-      0%   { transform: translateX(0%); }
-      28%  { transform: translateX(0%); }
-      33%  { transform: translateX(-100%); }
-      61%  { transform: translateX(-100%); }
-      66%  { transform: translateX(-200%); }
-      94%  { transform: translateX(-200%); }
-      100% { transform: translateX(-300%); }
-    }
-
-    #announcement-bar-realestate .ann-bar__dots {
-      display: flex;
-      gap: 6px;
-      position: absolute;
-      left: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    #announcement-bar-realestate .ann-bar__dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: #6A9E7A;
-      opacity: 0.5;
-    }
-
-    #announcement-bar-realestate .ann-bar__dot:first-child {
-      opacity: 1;
-      background: #D9E8D2;
-    }
-
-    @media (max-width: 600px) {
-      #announcement-bar-realestate .ann-bar__text {
-        font-size: 11.5px;
-        letter-spacing: 0.04em;
-      }
-
-      #announcement-bar-realestate .ann-bar__dots {
-        display: none;
-      }
-    }
-  </style>
-
-  <div class="ann-bar">
-    <div class="ann-bar__container">
-      <div class="ann-bar__wrapper">
-        <div class="ann-bar__slider-wrap">
-          <div class="ann-bar__track">
-            <div class="ann-bar__slide">
-              <p class="ann-bar__text">האתר פעיל ושירות הייעוץ הנדל"ני זמין בכל עת — צרו קשר עוד היום</p>
-            </div>
-            <div class="ann-bar__slide">
-              <p class="ann-bar__text">נכסים חדשים בפתח תקווה — יעל רום 5, הזדמנות שלא כדאי לפספס</p>
-            </div>
-            <div class="ann-bar__slide">
-              <p class="ann-bar__text">מקצועיות, אמינות ונסיון בנדל"ן — כל מה שצריך תחת קורת גג אחת</p>
-            </div>
-            <div class="ann-bar__slide">
-              <p class="ann-bar__text">האתר פעיל ושירות הייעוץ הנדל"ני זמין בכל עת — צרו קשר עוד היום</p>
-            </div>
-          </div>
+      <!-- Trust Line -->
+      <div class="index-hero-trust">
+        <div class="index-hero-trust-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>הכתובת שכולם רוצים! 🔥</span>
         </div>
-        <div class="ann-bar__dots">
-          <div class="ann-bar__dot"></div>
-          <div class="ann-bar__dot"></div>
-          <div class="ann-bar__dot"></div>
+        <div class="index-hero-trust-divider" aria-hidden="true"></div>
+        <div class="index-hero-trust-item">
+          <i class="fa-solid fa-building"></i>
+          <span>בניין מגורים</span>
+        </div>
+        <div class="index-hero-trust-divider" aria-hidden="true"></div>
+        <div class="index-hero-trust-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>דברו איתנו ישירות — אנחנו כאן! 📲</span>
         </div>
       </div>
     </div>
   </div>
-</section><section id="hero" class="v1-hero" data-layout-spec="בית-hero" dir="rtl">
-  <style>
-    .v1-hero { display: flex; flex-direction: row; height: 100vh; min-height: 600px; background: #1F3A5F; font-family: 'Rubik', sans-serif; overflow: hidden; position: relative; }
-    .v1-content-side { flex: 0 0 44%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 100px 56px 80px; background: #1F3A5F; position: relative; z-index: 2; }
-    .v1-content-side::after { content: ''; position: absolute; left: -1px; top: 0; width: 32px; height: 100%; background: #1F3A5F; z-index: 3; }
-    .v1-badge { display: inline-block; background: rgba(143,163,154,0.2); color: #8FA39A; font-size: 11px; font-weight: 700; letter-spacing: 3px; padding: 6px 18px; border-radius: 30px; margin-bottom: 32px; text-transform: uppercase; border: 1px solid rgba(143,163,154,0.35); white-space: nowrap; }
-    .v1-main-title { font-size: clamp(42px, 4.5vw, 72px); font-weight: 900; color: #FAF9F6; line-height: 1.0; margin: 0 0 10px 0; letter-spacing: -1px; }
-    .v1-city { display: block; color: #8FA39A; font-size: clamp(28px, 3vw, 48px); font-weight: 300; letter-spacing: 3px; margin-top: 6px; }
-    .v1-divider-line { width: 50px; height: 3px; background: linear-gradient(to left, #8FA39A, transparent); margin: 28px 0; border-radius: 2px; }
-    .v1-subtitle { font-size: 16px; color: rgba(217,210,195,0.8); line-height: 1.85; margin: 0 0 28px 0; max-width: 380px; }
-    .v1-location { color: #8FA39A; font-size: 13px; margin-bottom: 44px; display: flex; align-items: center; gap: 8px; font-weight: 500; }
-    .v1-location-icon { font-size: 15px; }
-    .v1-cta-group { display: flex; gap: 14px; flex-wrap: wrap; }
-    .v1-btn-primary { background: #D9D2C3; color: #1F3A5F; padding: 15px 36px; border-radius: 4px; text-decoration: none; font-weight: 800; font-size: 15px; transition: all 0.3s; letter-spacing: 0.3px; white-space: nowrap; }
-    .v1-btn-primary:hover { background: #FAF9F6; transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
-    .v1-btn-secondary { background: transparent; color: #D9D2C3; padding: 15px 32px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 15px; border: 1.5px solid rgba(143,163,154,0.45); transition: all 0.3s; white-space: nowrap; }
-    .v1-btn-secondary:hover { background: rgba(143,163,154,0.15); border-color: #8FA39A; color: #FAF9F6; }
-    .v1-image-side { flex: 1; position: relative; overflow: hidden; }
-    .v1-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; transition: transform 10s ease; }
-    .v1-hero:hover .v1-hero-img { transform: scale(1.05); }
-    .v1-image-overlay { position: absolute; inset: 0; background: linear-gradient(to right, #1F3A5F 0%, rgba(31,58,95,0.2) 25%, transparent 55%); }
-    .v1-image-badge { position: absolute; bottom: 36px; left: 36px; background: rgba(15,24,45,0.78); backdrop-filter: blur(14px); border: 1px solid rgba(143,163,154,0.3); color: #D9D2C3; padding: 14px 22px; border-radius: 12px; font-size: 13px; font-weight: 600; line-height: 1.5; }
-    .v1-image-badge strong { display: block; font-size: 19px; font-weight: 900; color: #FAF9F6; margin-bottom: 2px; }
-    @media (max-width: 900px) {
-      .v1-hero { flex-direction: column; height: auto; min-height: 100svh; }
-      .v1-image-side { flex: none; height: 52vw; min-height: 240px; max-height: 380px; }
-      .v1-content-side { flex: none; padding: 52px 28px 64px; justify-content: flex-start; }
-      .v1-content-side::after { display: none; }
-      .v1-image-overlay { background: linear-gradient(to bottom, rgba(31,58,95,0.1) 0%, #1F3A5F 100%); }
-      .v1-image-badge { bottom: 16px; left: 16px; }
-    }
-  </style>
 
-  <div class="v1-content-side">
-    <div class="v1-badge">נדל"ן פרימיום • פתח תקווה</div>
-    <h1 class="v1-main-title">יעל רום 5<span class="v1-city">פתח תקווה</span></h1>
-    <div class="v1-divider-line"></div>
-    <p class="v1-subtitle">בניין מגורים מוקפד במיקום מרכזי — הזדמנות נדל"ן נדירה לרכישה ולהשכרה</p>
-    <div class="v1-location"><span class="v1-location-icon">📍</span> פתח תקווה, ישראל</div>
-    <div class="v1-cta-group">
-      <a href="#contact" class="v1-btn-primary" data-element-type="button" data-element-id="btn-1775881426942-w390s2amy">לפרטים נוספים</a>
-      <a href="#contact" class="v1-btn-secondary" data-element-type="button" data-element-id="btn-1775881426942-wfxw0fo48">קביעת ביקור</a>
-    </div>
-  </div>
-
-  <div class="v1-image-side">
-    <img src="/assets/site-index-hero-image-1-1774798389959-saiewd.webp?v=1774798389959" alt="בניין יעל רום 5 פתח תקווה - חזית הבניין" class="v1-hero-img" data-hero-bg="true" data-element-type="image" data-element-id="img-1775881426944-ytbacktm5">
-    <div class="v1-image-overlay"></div>
-    <div class="v1-image-badge">
-      <strong>יעל רום 5</strong>
-      פתח תקווה, ישראל
-    </div>
-  </div>
-
-</section>
-
-<section id="partners-section" class="partners-strip" aria-label="שותפים ומותגים" style="background-color: #FAF9F6; position: relative; overflow: hidden; --zappy-bg-color: #FAF9F6" data-zappy-bg-type="color" data-zappy-bg-color="#FAF9F6" data-zappy-bg-image="" data-zappy-bg-overlay-color="#000000" data-zappy-bg-overlay-opacity="30" data-zappy-bg-video-type="" data-zappy-bg-video-url="">
-  <div class="partners-strip__container">
-    <ul class="partners-strip__list" role="list">
-
-      <li class="partners-strip__item">
-        <a href="https://www.phoenix.co.il" target="_blank" rel="noopener noreferrer" class="partners-strip__link" aria-label="הפניקס Smart - עבור לאתר">
-          <img src="/assets/image-remove_background-1775881240269-hla8zy.png?v=1775881240269" alt="הפניקס Smart לוגו" class="partners-strip__logo" data-placeholder="partners-phoenix-logo" data-context="הפניקס Smart insurance company logo, professional corporate branding, blue and orange colors, clean white background">
-        </a>
-      </li>
-
-      <li class="partners-strip__item">
-        <a href="https://www.migdal.co.il" target="_blank" rel="noopener noreferrer" class="partners-strip__link" aria-label="מגדל - עבור לאתר">
-          <img src="/assets/image-remove_background-remove_background-1775881269545-mktck9.png?v=1775881269545" alt="מגדל לוגו" class="partners-strip__logo" data-placeholder="partners-migdal-logo" data-context="Migdal מגדל Israeli insurance and finance company logo, corporate branding, clean white background">
-        </a>
-      </li>
-
-      <li class="partners-strip__item">
-        <a href="https://www.harel-group.co.il" target="_blank" rel="noopener noreferrer" class="partners-strip__link" aria-label="הראל - עבור לאתר">
-          <img src="/assets/image-remove_background-1775881159987-ubnghg.png?v=1775881159987" alt="הראל לוגו" class="partners-strip__logo" data-placeholder="partners-harel-logo" data-context="Harel הראל Israeli insurance group logo, professional corporate branding, clean white background">
-        </a>
-      </li>
-
-      <li class="partners-strip__item">
-        <a href="https://passportcard.co.il" target="_blank" rel="noopener noreferrer" class="partners-strip__link" aria-label="PassportCard - עבור לאתר">
-          <img src="/assets/image-remove_background-1775881294712-f6h3c8.png?v=1775881294712" alt="PassportCard לוגו" class="partners-strip__logo" data-placeholder="partners-passportcard-logo" data-context="PassportCard travel insurance company logo, modern branding with card and passport motif, clean white background">
-        </a>
-      </li>
-
-    </ul>
+  <!-- Bottom Divider -->
+  <div class="index-hero-divider-wrapper">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,90 L0,55 Q150,30 300,48 T600,38 Q800,28 1000,46 T1200,42 L1200,90 Z" fill="#FAF9F6"></path>
+    </svg>
   </div>
 </section>
-
-
 
 <section id="features" class="index-features-section" data-layout-spec="בית-features" dir="rtl">
   <div class="index-features-container">
@@ -1031,16 +846,16 @@
 
       <!-- Intro -->
       <div class="index-features-intro">
-        <p><span class="index-features-label">יתרונות הנכס</span>
-        </p><h2 class="index-features-heading">חיים נוחים ומשתלמים ביעל רום 5 פתח תקווה</h2>
-        <p class="index-features-desc">סביבה שקטה, נגישות מלאה ותשתית איכותית — בחירה בטוחה לדיור עצמי ולהשקעה.</p>
+        <span class="index-features-label">כל הסיבות לאהוב את הנכס הזה 💛</span>
+        <h2 class="index-features-heading">חיים נוחים ומשתלמים<br>ביעל רום 5 פתח תקווה</h2>
+        <p class="index-features-desc">יעל רום 5 הוא הקומבינציה שחלמתם עליה — שקט שכונתי, נגישות מלאה לעיר ותשתית שגורמת לכל דירה להרגיש כמו הימור בטוח. לגור בו? מעולה. להשקיע בו? עוד יותר! 🏡</p>
       </div>
 
       <!-- Feature Cards 2x2 Grid -->
-      <div class="index-features-grid zappy-preserve-css-grid" id="zappy-auto-grid-1775018781400-wcv1lb" data-zappy-auto-grid="true" data-original-item-width="308" data-original-gap="20px" style="display: grid; --zappy-grid-cols: 307.998px 308.008px; grid-template-columns: 307.998px 308.008px; align-items: stretch !important;" data-zappy-explicit-columns="true">
+      <div class="index-features-grid">
 
         <!-- Card 1 -->
-        <article class="index-feature-card" data-grid-item-index="0">
+        <article class="index-feature-card">
           <div class="index-feature-icon-wrap">
             <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="5"></circle>
@@ -1055,13 +870,13 @@
             </svg>
           </div>
           <div class="index-feature-text">
-            <h3>אור טבעי לאורך כל היום</h3>
-            <p style="color: #FFD700">חלונות גדולים וחשיפה מיטבית לשמש מבטיחים אווירה בהירה ומזמינה בכל שעות היממה.</p>
+            <h3>שמש? יש לנו בשפע! ☀️</h3>
+            <p>חלונות ענקיים שמכניסים את השמש פנימה ומבטיחים שהבית שלכם תמיד יזהר ויזמין — בוקר, צהריים וערב! 🌞</p>
           </div>
         </article>
 
         <!-- Card 2 -->
-        <article class="index-feature-card" data-grid-item-index="1">
+        <article class="index-feature-card">
           <div class="index-feature-icon-wrap">
             <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
@@ -1069,13 +884,13 @@
             </svg>
           </div>
           <div class="index-feature-text">
-            <h3>סביבת מגורים מטופחת</h3>
-            <p style="color: #008000">בניין מוקפד ומנוהל היטב, עם שטחים משותפים נקיים ותחושת שכונה מגובשת ואיכותית.</p>
+            <h3>שכונה שמרגישים שאוהבים אותה 💐</h3>
+            <p>בניין שמטפחים אותו באהבה — שטחים משותפים נקיים, שכנים נחמדים ותחושה של קהילה אמיתית. פשוט מרגיש כמו בית! 🤝</p>
           </div>
         </article>
 
         <!-- Card 3 -->
-        <article class="index-feature-card" data-grid-item-index="2">
+        <article class="index-feature-card">
           <div class="index-feature-icon-wrap">
             <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="10"></circle>
@@ -1083,13 +898,13 @@
             </svg>
           </div>
           <div class="index-feature-text">
-            <h3>נגישות מלאה לכל הצרכים</h3>
-            <p style="color: #0000ff">מרחק הליכה מתחבורה ציבורית, מסחר, בתי ספר ופארקים — הכל בהישג יד מרחוב יעל רום.</p>
+            <h3>הכל קרוב — ממש הכל! 🛍️</h3>
+            <p>אוטובוס? חנות? בית ספר? פארק? הכל במרחק כמה צעדים מיעל רום. כמעט לא צריך לזוז מהבית! 🚶‍♀️</p>
           </div>
         </article>
 
         <!-- Card 4 -->
-        <article class="index-feature-card" data-grid-item-index="3">
+        <article class="index-feature-card">
           <div class="index-feature-icon-wrap">
             <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -1097,18 +912,18 @@
             </svg>
           </div>
           <div class="index-feature-text">
-            <h3>כתובת יוקרתית ומבוקשת</h3>
-            <p style="color: #ff0000">פתח תקווה בעלייה מתמדת — הנכס מציע ערך מוסף כהשקעה נדל"נית עם פוטנציאל צמיחה ברור.</p>
+            <h3>הכתובת שגורמת לאנשים להתקנא 😏✨</h3>
+            <p>פתח תקווה עולה ועולה — והנכס הזה עולה איתה! השקעה עם פוטנציאל שפשוט לא מפסיק לגדול 📈🚀</p>
           </div>
         </article>
 
       </div><!-- /grid -->
-    </div><div class="zappy-inserted-element" id="zappy-element-1775309613719-mm04fpveo" data-element-id="zappy-element-1775309613719-mm04fpveo" data-element-type="image" data-zappy-newly-inserted="true" data-zappy-media-cell="true" data-zappy-original-height="892.65625" style="display: flex; flex-direction: column; align-items: stretch; justify-content: stretch; height: 892.656px !important; margin: 0px !important; padding: 0px !important; width: 100%; max-width: 100%; overflow: hidden !important;"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDMyMCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFOEU4RTgiLz48cmVjdCB4PSIzMCIgeT0iMTUiIHdpZHRoPSIyNjAiIGhlaWdodD0iMTUwIiByeD0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOUU5RTlFIiBzdHJva2Utd2lkdGg9IjQiLz48Y2lyY2xlIGN4PSI3NSIgY3k9IjUwIiByPSIxNSIgZmlsbD0iIzlFOUU5RSIvPjxwYXRoIGQ9Ik03NSAxMDAgTDEwNSA3MCBMMTM1IDkwIEwxNTAgNzUgTDE4MCA5MCBMMjI1IDUwIEwyNzUgODAgTDI3NSAxNTAgTDQ1IDE1MCBMNDUgMTE1IFoiIGZpbGw9IiNCMEIwQjAiLz48cGF0aCBkPSJNMTM1IDkwIEwxNTAgNzUgTDE4MCA5MCBMMjI1IDUwIEwyNzUgODAgTDI3NSAxNTAgTDEzNSAxNTAgWiIgZmlsbD0iIzlFOUU5RSIvPjwvc3ZnPg==" alt="Image" style="width: 100%; height: 100% !important; border-radius: 8px; max-width: 100%; object-fit: cover !important; margin-top: 20px; margin-right: auto !important; margin-bottom: 20px; margin-left: auto !important; object-position: 50% 50%; display: block;" data-element-type="image" data-element-id="zappy-element-1775309613719-mm04fpveo" id="zappy-element-1775309613719-mm04fpveo"></div><!-- /content -->
+    </div><!-- /content -->
 
     <!-- Image Column (END = LEFT in RTL) -->
     <div class="index-features-image-col">
       <figure class="index-features-figure">
-        
+        <img data-placeholder="index-features-image-1" data-context="Elegant residential building entrance in Petah Tikva, Israel. Daylight photography, clean architectural lines, warm stone facade, well-maintained lobby area with glass doors, lush greenery at the entrance, modern yet timeless aesthetic, bright and inviting atmosphere. Realistic real-estate brochure style, no staged luxury excess." width="560" height="740" src="/assets/site-index-features-image-1.webp" alt="כניסה לבניין יעל רום 5 פתח תקווה — חזית מוארת ומטופחת">
       </figure>
     </div><!-- /image col -->
 
@@ -1132,13 +947,13 @@
     <!-- START column: text + benefits -->
     <div class="index-benefits-content">
       <div class="index-benefits-header">
-        <p><span class="index-benefits-label">מיקום ואיכות חיים</span>
-        </p><h2 class="index-benefits-title" >יעל רום 5 פתח תקווה — כתובת שחיה את עצמה</h2>
-        <p class="index-benefits-intro">הבניין ממוקם בלב שכונה שקטה ומבוססת בפתח תקווה, המאזנת בין נגישות עירונית מלאה לאווירה שכונתית אנושית. כל מה שצריך — במרחק הליכה או נסיעה קצרה.</p>
+        <span class="index-benefits-label">מיקום מנצח + חיים כיפיים = יעל רום 5 🎯</span>
+        <h2 class="index-benefits-title">יעל רום 5 פתח תקווה —<br>כתובת שחיה את עצמה</h2>
+        <p class="index-benefits-intro">דמיינו שכונה שקטה ונעימה שמרגישה כמו מקלט — אבל עם כל העיר בהישג יד. זה בדיוק מה שיעל רום 5 נותנת לכם. הכל קרוב, הכל נגיש, ואתם מרוצים 😄🏘️</p>
       </div>
 
       <ul class="index-benefits-list">
-        <li class="index-benefit-row zappy-grid-item-nested-grid" data-grid-item-index="0">
+        <li class="index-benefit-row">
           <div class="index-benefit-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M14 4C10.134 4 7 7.134 7 11c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
@@ -1146,12 +961,12 @@
             </svg>
           </div>
           <div class="index-benefit-text">
-            <h3>קרבה למוסדות חינוך ושירותי משפחה</h3>
-            <p>בתי ספר, גני ילדים ומרכזי טיפת חלב במרחק הליכה — סביבה אידיאלית למשפחות עם ילדים.</p>
+            <h3>גן, בית ספר וטיפת חלב — ממש מעברו לפינה! 👨‍👩‍👧‍👦</h3>
+            <p>בתי ספר, גנים וטיפות חלב כל כך קרובים, שהילדים כמעט יכולים להגיע לבד! סביבה שמשפחות פשוט מתאהבות בה 💛👶</p>
           </div>
         </li>
 
-        <li class="index-benefit-row zappy-grid-item-nested-grid" data-grid-item-index="1">
+        <li class="index-benefit-row">
           <div class="index-benefit-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <rect x="4" y="10" width="20" height="12" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
@@ -1160,12 +975,12 @@
             </svg>
           </div>
           <div class="index-benefit-text">
-            <h3>נגישות עירונית מצוינת</h3>
-            <p>גישה נוחה לכבישים ראשיים, תחבורה ציבורית תכופה וקרבה לצירי התחברות מרכזיים לתל אביב ולמרכז הארץ.</p>
+            <h3>להגיע לכל מקום? קל כמו שניה! 🚌</h3>
+            <p>כבישים ראשיים? ממש ליד. אוטובוסים תכופים? בהחלט. תל אביב ומרכז הארץ? קפיצה קטנה. כי למה שהגעה לכל מקום תהיה מסובכת? 🚗💨</p>
           </div>
         </li>
 
-        <li class="index-benefit-row zappy-grid-item-nested-grid" data-grid-item-index="2">
+        <li class="index-benefit-row">
           <div class="index-benefit-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M5 14h18M5 10h18M5 18h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
@@ -1173,12 +988,12 @@
             </svg>
           </div>
           <div class="index-benefit-text">
-            <h3>קניות ושגרה בהישג יד</h3>
-            <p>סופרמרקטים, בתי מרקחת, בנקים ומסחר שכונתי — כל צרכי היומיום נגישים ללא צורך ברכב.</p>
+            <h3>קניות, בנק, תרופות — בלי לחפש! 🛒</h3>
+            <p>סופר, בית מרקחת, בנק ועוד ועוד — הכל מחכה לכם ממש מעבר לפינה. הרכב יכול להישאר בחניה 😄🏪</p>
           </div>
         </li>
 
-        <li class="index-benefit-row zappy-grid-item-nested-grid" data-grid-item-index="3">
+        <li class="index-benefit-row">
           <div class="index-benefit-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M14 5c0 0-7 4.5-7 10a7 7 0 0 0 14 0C21 9.5 14 5 14 5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
@@ -1186,12 +1001,12 @@
             </svg>
           </div>
           <div class="index-benefit-text">
-            <h3>פארקים ושטחי ירק פתוחים</h3>
+            <h3>ירוק, פתוח ומרענן — ממש כאן! 🌳</h3>
             <p>גינות שכונתיות ומרחבי ירק ציבוריים בסמוך לבניין — לאיזון בין עיר לטבע בשגרת היומיום.</p>
           </div>
         </li>
 
-        <li class="index-benefit-row zappy-grid-item-nested-grid" data-grid-item-index="4">
+        <li class="index-benefit-row">
           <div class="index-benefit-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M4 22V10l10-6 10 6v12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"></path>
@@ -1210,19 +1025,19 @@
     <!-- END column: map + peeking photo tile -->
     <div class="index-benefits-visual">
       <div class="index-benefits-map-card">
-        <img data-placeholder="index-benefits-image-1" data-context="A polished, brochure-style illustrated map of the Petah Tikva neighborhood around Yael Rom Street. Clean minimal cartographic style with soft warm tones, showing nearby streets, parks, schools, and landmarks. Navy pins mark key points of interest. The style is premium real-estate marketing — not a screenshot of Google Maps but a refined, curated neighborhood overview." width="560" height="460" src="/assets/site-index-benefits-image-1-grayscale-1775882288482-a3rh2l.webp?v=1775882288482" alt="מפת שכונת יעל רום, פתח תקווה — מיקום הבניין ונקודות עניין סמוכות" class="index-benefits-map-img" data-element-type="image" data-element-id="img-1775835466115-kaax5vdwr" >
+        <img data-placeholder="index-benefits-image-1" data-context="A polished, brochure-style illustrated map of the Petah Tikva neighborhood around Yael Rom Street. Clean minimal cartographic style with soft warm tones, showing nearby streets, parks, schools, and landmarks. Navy pins mark key points of interest. The style is premium real-estate marketing — not a screenshot of Google Maps but a refined, curated neighborhood overview." width="560" height="460" src="/assets/site-index-benefits-image-1.webp" alt="מפת שכונת יעל רום, פתח תקווה — מיקום הבניין ונקודות עניין סמוכות" class="index-benefits-map-img">
         <div class="index-benefits-map-badge">
           <svg data-element-type="icon" data-icon-type="svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="7" cy="6" r="2.5" stroke="currentColor" stroke-width="1.4"></circle>
             <path d="M7 2C4.791 2 3 3.791 3 6c0 3.25 4 7 4 7s4-3.75 4-7c0-2.209-1.791-4-4-4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path>
           </svg>
-          <span>יעל רום 5, פתח תקווה, ישראל</span>
+          <span>יעל רום 5, פתח תקווה</span>
         </div>
       </div>
 
       <!-- Peeking photo tile -->
       <div class="index-benefits-peek-tile">
-        <img data-placeholder="index-benefits-image-2" data-context="A warm street-level photograph of a pleasant residential street in Petah Tikva, Israel. Tree-lined sidewalk with dappled sunlight, local shops or greenery visible, calm and inviting atmosphere. Suitable for a premium real-estate brochure conveying livability and daily convenience." width="200" height="160" src="/assets/site-index-benefits-image-2.webp" alt="רחוב שכונתי נעים בפתח תקווה — תמונת סביבה" class="index-benefits-peek-img" data-element-type="image" data-element-id="img-1775835466115-4r1m5gfyu" >
+        <img data-placeholder="index-benefits-image-2" data-context="A warm street-level photograph of a pleasant residential street in Petah Tikva, Israel. Tree-lined sidewalk with dappled sunlight, local shops or greenery visible, calm and inviting atmosphere. Suitable for a premium real-estate brochure conveying livability and daily convenience." width="200" height="160" src="/assets/site-index-benefits-image-2.webp" alt="רחוב שכונתי נעים בפתח תקווה — תמונת סביבה" class="index-benefits-peek-img">
       </div>
     </div>
 
@@ -1246,7 +1061,7 @@
     <div class="index-gallery-grid">
       <!-- Large vertical image — START (right) spanning 2 rows -->
       <figure class="index-gallery-tile tile-large">
-        <img data-placeholder="index-gallery-image-1" data-context="Exterior facade of a modern residential building in Petah Tikva, Israel. Clean architectural lines, light-colored stone cladding, large windows, lush landscaping at the entrance, bright daylight, aspirational real-estate brochure style, uncluttered and editorial" width="600" height="800" src="/assets/site-index-gallery-image-1-1774798452190-1oygcy.webp?v=1774798452190" alt="חזית הבניין — יעל רום 5 פתח תקווה">
+        <img data-placeholder="index-gallery-image-1" data-context="Exterior facade of a modern residential building in Petah Tikva, Israel. Clean architectural lines, light-colored stone cladding, large windows, lush landscaping at the entrance, bright daylight, aspirational real-estate brochure style, uncluttered and editorial" width="600" height="800" src="/assets/site-index-gallery-image-1.webp" alt="חזית הבניין — יעל רום 5 פתח תקווה">
         <figcaption class="index-gallery-caption">חזית הבניין</figcaption>
       </figure>
 
@@ -1282,7 +1097,7 @@
       <defs>
         <linearGradient id="galleryFade" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="#F3EEE5" stop-opacity="0"></stop>
-          <stop offset="100%" stop-color="#1F5F3A" stop-opacity="1"></stop>
+          <stop offset="100%" stop-color="#1F3A5F" stop-opacity="1"></stop>
         </linearGradient>
       </defs>
       <path d="M0,100 L0,38 Q150,18 300,32 T600,22 Q750,12 900,28 T1200,18 L1200,100 Z" fill="#1F3A5F"></path>
@@ -1378,7 +1193,7 @@
     <!-- Intro Block -->
     <div class="index-stats-intro">
       <span class="index-stats-label">עובדות ומספרים</span>
-      <h2 class="index-stats-heading">יעל רום 5 פתח תקווה – כל מה שחשוב לדעת</h2>
+      <h2 class="index-stats-heading">יעל רום 5 פתח תקווה –<br>כל מה שחשוב לדעת</h2>
       <p class="index-stats-subtext">הבניין ממוקם בלב פתח תקווה, מציע נגישות מיידית לכל מה שחשוב – תחבורה, מסחר, חינוך ופנאי. הנה הנתונים שמדברים בעד עצמם.</p>
     </div>
 
@@ -1426,11 +1241,11 @@
       <div class="index-trust-divider" aria-hidden="true"></div>
       <div class="index-trust-item">
         <i class="fa-solid fa-location-dot index-trust-icon" aria-hidden="true"></i>
-        <span>יעל רום 5, פתח תקווה, ישראל</span>
+        <span>כתובת מוכרת ומבוקשת</span>
       </div>
       <div class="index-trust-divider" aria-hidden="true"></div>
       <div class="index-trust-item">
-        
+        <i class="fa-solid fa-phone index-trust-icon" aria-hidden="true"></i>
         <span>תקשורת ישירה ומהירה</span>
       </div>
     </div>
@@ -1444,78 +1259,6 @@
   </div>
 
 </section>
-
-<section class="loc-map-section" aria-labelledby="loc-map-title">
-  <div class="loc-map-container">
-    <div class="loc-map-header">
-      <div class="loc-map-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"></path>
-          <circle cx="12" cy="10" r="3"></circle>
-        </svg>
-      </div>
-      <h2 class="loc-map-title" id="loc-map-title">המיקום שלנו</h2>
-      <p class="loc-map-description">יעל רום 5, פתח תקווה — במרכז העיר, נגיש מכל כיוון</p>
-      <div class="loc-map-divider" aria-hidden="true"></div>
-    </div>
-
-    <div class="loc-map-details-row">
-      <div class="loc-map-detail-item">
-        <span class="loc-map-detail-icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-          </svg>
-        </span>
-        <span>יעל רום 5, פתח תקווה</span>
-      </div>
-      <div class="loc-map-detail-item">
-        <span class="loc-map-detail-icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-        </span>
-        <span>נגיש בתחבורה ציבורית ופרטית</span>
-      </div>
-      <div class="loc-map-detail-item">
-        <span class="loc-map-detail-icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="1" y="3" width="15" height="13" rx="2"></rect>
-            <path d="M16 8h4l3 3v5h-7V8z"></path>
-            <circle cx="5.5" cy="18.5" r="2.5"></circle>
-            <circle cx="18.5" cy="18.5" r="2.5"></circle>
-          </svg>
-        </span>
-        <span>חניה זמינה בסביבה</span>
-      </div>
-    </div>
-
-    <div class="loc-map-frame-wrapper">
-      <iframe class="loc-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3379.0!2d34.8876!3d32.0879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b9b9b9b9b9b%3A0x0!2z15nXkdeUINepXdeg15kg15UgNSDXpNiqXdeg15Ag16rXqdeqXdeg15XXldeT!5e0!3m2!1siw!2sil!4v1700000000000!5m2!1siw!2sil&amp;q=יעל+רום+5+פתח+תקווה+ישראל" width="100%" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="מפת גוגל — יעל רום 5, פתח תקווה" aria-label="מפת גוגל המציגה את מיקום הבניין ברחוב יעל רום 5, פתח תקווה"></iframe>
-    </div>
-
-    <div class="loc-map-cta-row">
-      <a class="loc-map-cta-btn" href="https://maps.google.com/?q=יעל+רום+5+פתח+תקווה+ישראל" target="_blank" rel="noopener noreferrer" aria-label="פתח את הכתובת במפות גוגל בחלון חדש">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"></path>
-          <circle cx="12" cy="10" r="3"></circle>
-        </svg>
-        פתח במפות גוגל
-      </a>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
 
 <section id="contact" class="index-contact-section" data-layout-spec="בית-contact" dir="rtl">
   <div class="index-contact-inner">
@@ -1551,13 +1294,13 @@
       </div>
 
       <div class="index-contact-direct">
-        <a href="tel:0522972222" class="index-contact-direct-link">
+        <a href="tel:[business_phone]" class="index-contact-direct-link">
           <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.01 2.82 2 2 0 012 .67h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.49a16 16 0 006.29 6.29l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-          <span>0522972222</span>
+          <span>[business_phone]</span>
         </a>
-        <a href="mailto:barrysela@gmail.com" class="index-contact-direct-link">
+        <a href="mailto:[business_email]" class="index-contact-direct-link">
           <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          <span>barrysela@gmail.com</span>
+          <span>[business_email]</span>
         </a>
       </div>
     </div>
@@ -1600,12 +1343,12 @@
 
         <!-- Company Info -->
         <div class="footer-col footer-brand">
-          <img src="/assets/business-logo.webp" alt="יעל רום 5 פתח תקווה" class="logo" data-element-type="image" data-element-id="img-1774853967922-mh1lokn0v" >
+          <img src="/assets/business-logo.webp" alt="יעל רום 5 פתח תקווה" class="logo">
           <p class="footer-tagline">נדל"ן איכותי בלב פתח תקווה. ליווי מקצועי, אישי ומהימן לאורך כל הדרך.</p>
           <div class="footer-social">
-            <a href="#" aria-label="Facebook" class="social-link" style="display:none !important;"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram" class="social-link" style="display:none !important;"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="WhatsApp" class="social-link" style="display:none !important;"><i class="fab fa-whatsapp"></i></a>
+            <a href="[facebook_handle]" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="[instagram_handle]" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="[whatsapp_handle]" aria-label="WhatsApp" class="social-link"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
 
@@ -1624,19 +1367,26 @@
         <!-- Contact Info -->
         <div class="footer-col">
           <h4 class="footer-heading">יצירת קשר</h4>
-          <ul class="footer-contact" ><li>
-              <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1774853967921-th1kysuhe" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
-              <a href="mailto:barrysela@gmail.com">barrysela@gmail.com</a>
-            </li><li><a href="/" style="display:flex;align-items:flex-start;gap:inherit"><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span>
-              <span>יעל רום 5, פתח תקווה, ישראל</span></a></li></ul>
+          <ul class="footer-contact">
+            <li>
+              <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+              <a href="mailto:[business_email]">[business_email]</a>
+            </li>
+            <li>
+              <span class="contact-icon"><i class="fas fa-phone"></i></span>
+              <a href="tel:[business_phone]">[business_phone]</a>
+            </li>
+            <li><a href="/"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+              <span>[business_address]</span></a></li>
+          </ul>
         </div>
 
         <!-- About / CTA -->
         <div class="footer-col footer-cta-col">
           <h4 class="footer-heading">מצאו את הבית שלכם</h4>
           <p class="footer-cta-text">יעל רום 5 — פרויקט יוקרתי במיקום מרכזי בפתח תקווה. בואו לגלות את הדירה המושלמת עבורכם.</p>
-          <p class="zappy-editable"><a href="#features" class="footer-cta-btn" data-element-type="button" data-element-id="btn-1774853967919-0gyatihla" data-native-element="true">גלו עוד</a>
-        </p></div>
+          <a href="#features" class="footer-cta-btn">גלו עוד</a>
+        </div>
 
       </div>
     </div>
@@ -1719,6 +1469,61 @@
           observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
         });
       }, 500);
+    })();
+    </script>
+
+    <script id="zappy-navbar-scroll-effect">
+    (function(){
+      var nb=document.querySelector('nav.navbar,.navbar:not(.zappy-catalog-menu)');
+      var cm=document.querySelector('.zappy-catalog-menu,#zappy-catalog-menu');
+      if(!nb)return;
+      var fb='rgba(250,249,246,0.85)';
+      var th=60;
+      var rs=getComputedStyle(document.documentElement);
+      var td=rs.getPropertyValue('--text-dark').trim()||'#1a1a1a';
+      var tl=rs.getPropertyValue('--text-light').trim()||'#ffffff';
+      var st=true?td:tl;
+      nb.style.transition='background 0.3s ease,backdrop-filter 0.3s ease,-webkit-backdrop-filter 0.3s ease,box-shadow 0.3s ease';
+      if(cm)cm.style.transition='background 0.3s ease,backdrop-filter 0.3s ease,-webkit-backdrop-filter 0.3s ease';
+      var neSel='a,.navbar-brand,.navbar-brand a,.dropdown-toggle,.mobile-toggle,.phone-header-btn,.mobile-hamburger-btn,.mobile-close-btn,.mobile-submenu-toggle,.nav-link';
+      var skipCls=['cart-link','login-link','nav-search-toggle','search-toggle'];
+      function sTC(c,clr){var els=c.querySelectorAll(neSel);for(var i=0;i<els.length;i++){var sk=false;if(els[i].closest('.sub-menu')||els[i].closest('.dropdown-menu')){sk=true;}for(var j=0;j<skipCls.length;j++){if(els[i].classList.contains(skipCls[j])){sk=true;break;}}if(!sk)els[i].style.setProperty('color',clr,'important');}}
+      function cTC(c){var els=c.querySelectorAll(neSel);for(var i=0;i<els.length;i++){if(els[i].closest('.sub-menu')||els[i].closest('.dropdown-menu'))continue;els[i].style.removeProperty('color');}}
+      function applyScrolled(){
+        nb.classList.add('scrolled');
+        if(window.innerWidth>768){
+          nb.style.setProperty('--frosted-text',st);
+          nb.style.setProperty('background-image','none','important');
+          nb.style.setProperty('background-color',fb,'important');
+          nb.style.backdropFilter='blur(12px)';nb.style.webkitBackdropFilter='blur(12px)';nb.style.boxShadow='0 2px 16px rgba(0,0,0,0.12)';
+          sTC(nb,st);
+        }
+        if(cm){cm.classList.add('scrolled');if(window.innerWidth>768){cm.style.setProperty('background',fb,'important');cm.style.setProperty('backdrop-filter','blur(12px)','important');cm.style.setProperty('-webkit-backdrop-filter','blur(12px)','important');sTC(cm,st);}}
+      }
+      function onS(){
+        if(window._zappyNavNoDarkHero) return;
+        if(window.innerWidth<=768){nb.classList.remove('scrolled');cTC(nb);if(cm){cm.classList.remove('scrolled');cTC(cm);}return;}
+        var y=window.scrollY||window.pageYOffset;
+        if(y>th){
+          nb.classList.add('scrolled');nb.style.setProperty('background-color',fb,'important');nb.style.setProperty('background-image','none','important');
+          nb.style.setProperty('--frosted-text',st);nb.style.backdropFilter='blur(12px)';nb.style.webkitBackdropFilter='blur(12px)';nb.style.boxShadow='0 2px 16px rgba(0,0,0,0.12)';
+          sTC(nb,st);
+          if(cm){cm.classList.add('scrolled');cm.style.setProperty('background',fb,'important');cm.style.setProperty('backdrop-filter','blur(12px)','important');cm.style.setProperty('-webkit-backdrop-filter','blur(12px)','important');sTC(cm,st);}
+        }else{
+          nb.classList.remove('scrolled');nb.style.setProperty('background-color','transparent','important');nb.style.removeProperty('background-image');
+          nb.style.removeProperty('--frosted-text');nb.style.backdropFilter='none';nb.style.webkitBackdropFilter='none';nb.style.boxShadow='none';
+          cTC(nb);
+          if(cm){cm.classList.remove('scrolled');cm.style.setProperty('background','transparent','important');cm.style.setProperty('backdrop-filter','none','important');cm.style.setProperty('-webkit-backdrop-filter','none','important');cTC(cm);}
+        }
+      }
+      function sLum(rv,gv,bv){rv/=255;gv/=255;bv/=255;rv=rv<=0.03928?rv/12.92:Math.pow((rv+0.055)/1.055,2.4);gv=gv<=0.03928?gv/12.92:Math.pow((gv+0.055)/1.055,2.4);bv=bv<=0.03928?bv/12.92:Math.pow((bv+0.055)/1.055,2.4);return 0.2126*rv+0.7152*gv+0.0722*bv;}
+      window.addEventListener('scroll',onS,{passive:true});
+      window.addEventListener('resize',onS,{passive:true});
+      onS();
+      var heroEl=document.querySelector('section[class*="hero"],[data-hero-type],main>section:first-child');
+      var hasDH=false;
+      if(heroEl){var hCs=getComputedStyle(heroEl);var hBI=hCs.backgroundImage;if(hBI&&hBI!=='none'){if(hBI.indexOf('url(')!==-1){var hM2=hCs.backgroundColor.match(/\d+/g);if(hM2&&hM2.length>=3){hasDH=sLum(parseInt(hM2[0]),parseInt(hM2[1]),parseInt(hM2[2]))<0.4;}else{hasDH=true;}}else if(hBI.indexOf('gradient')!==-1){var cM=hBI.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/g);if(cM&&cM.length>0){var tLm=0;for(var ci=0;ci<cM.length;ci++){var pts=cM[ci].match(/\d+/g);tLm+=sLum(parseInt(pts[0]),parseInt(pts[1]),parseInt(pts[2]));}hasDH=(tLm/cM.length)<0.4;}else{hasDH=true;}}else{hasDH=true;}}else{var hM=hCs.backgroundColor.match(/\d+/g);if(hM&&hM.length>=3){hasDH=sLum(parseInt(hM[0]),parseInt(hM[1]),parseInt(hM[2]))<0.4;}}}
+      if(!hasDH){window.removeEventListener('scroll',onS);window.removeEventListener('resize',onS);applyScrolled();window._zappyNavNoDarkHero=true;}
     })();
     </script>
 
