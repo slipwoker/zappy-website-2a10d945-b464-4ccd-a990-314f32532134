@@ -787,7 +787,153 @@
 </script>
   
   <main>
-    <section id="hero" class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim">
+    <section id="announcement-bar-realestate" style="width:100%;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;direction:rtl;">
+  <style>
+    #announcement-bar-realestate * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    #announcement-bar-realestate .ann-bar {
+      background: #1F5F3A;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #announcement-bar-realestate .ann-bar__container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    #announcement-bar-realestate .ann-bar__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      position: relative;
+    }
+
+    #announcement-bar-realestate .ann-bar__slider-wrap {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #announcement-bar-realestate .ann-bar__track {
+      display: flex;
+      width: 100%;
+      animation: annSlide 12s infinite;
+    }
+
+    #announcement-bar-realestate .ann-bar__slide {
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+    }
+
+    #announcement-bar-realestate .ann-bar__text {
+      color: #D9E8D2;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.5;
+    }
+
+    #announcement-bar-realestate .ann-bar__text::before {
+      content: "✦";
+      color: #6A9E7A;
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+
+    #announcement-bar-realestate .ann-bar__text::after {
+      content: "✦";
+      color: #6A9E7A;
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+
+    @keyframes annSlide {
+      0%   { transform: translateX(0%); }
+      28%  { transform: translateX(0%); }
+      33%  { transform: translateX(-100%); }
+      61%  { transform: translateX(-100%); }
+      66%  { transform: translateX(-200%); }
+      94%  { transform: translateX(-200%); }
+      100% { transform: translateX(-300%); }
+    }
+
+    #announcement-bar-realestate .ann-bar__dots {
+      display: flex;
+      gap: 6px;
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #announcement-bar-realestate .ann-bar__dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #6A9E7A;
+      opacity: 0.5;
+    }
+
+    #announcement-bar-realestate .ann-bar__dot:first-child {
+      opacity: 1;
+      background: #D9E8D2;
+    }
+
+    @media (max-width: 600px) {
+      #announcement-bar-realestate .ann-bar__text {
+        font-size: 11.5px;
+        letter-spacing: 0.04em;
+      }
+
+      #announcement-bar-realestate .ann-bar__dots {
+        display: none;
+      }
+    }
+  </style>
+
+  <div class="ann-bar">
+    <div class="ann-bar__container">
+      <div class="ann-bar__wrapper">
+        <div class="ann-bar__slider-wrap">
+          <div class="ann-bar__track">
+            <div class="ann-bar__slide">
+              <p class="ann-bar__text">האתר פעיל ושירות הייעוץ הנדל"ני זמין בכל עת — צרו קשר עוד היום</p>
+            </div>
+            <div class="ann-bar__slide">
+              <p class="ann-bar__text">נכסים חדשים בפתח תקווה — יעל רום 5, הזדמנות שלא כדאי לפספס</p>
+            </div>
+            <div class="ann-bar__slide">
+              <p class="ann-bar__text">מקצועיות, אמינות ונסיון בנדל"ן — כל מה שצריך תחת קורת גג אחת</p>
+            </div>
+            <div class="ann-bar__slide">
+              <p class="ann-bar__text">האתר פעיל ושירות הייעוץ הנדל"ני זמין בכל עת — צרו קשר עוד היום</p>
+            </div>
+          </div>
+        </div>
+        <div class="ann-bar__dots">
+          <div class="ann-bar__dot"></div>
+          <div class="ann-bar__dot"></div>
+          <div class="ann-bar__dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><section id="hero" class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim">
   <!-- Background Image Layer -->
   <div class="index-hero-bg">
     <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Daytime architectural exterior photograph of a modern residential apartment building in Petah Tikva, Israel. Bright sunny day with clear blue sky, lush street trees, clean sidewalk with parked cars, warm sunlight casting soft shadows on the building facade. The building has contemporary Israeli residential architecture with balconies, stone cladding, and large windows. Street-level context showing a pleasant urban neighborhood. Wide-angle shot emphasizing the full building height and its surroundings." width="1200" height="800" src="/assets/site-index-hero-image-1-1774798389959-saiewd.webp?v=1774798389959" alt="בניין יעל רום 5 פתח תקווה - חזית הבניין" data-hero-background="true" data-element-type="image" data-element-id="img-1775881426944-ytbacktm5">
